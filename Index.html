@@ -2,9 +2,81 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
         <title>Survey Form</title>
     </head>
     <body>
 
+        <main id="container">
+            <h1 id="title">How deep do you know Football</h1>
+            <p id="description">
+                This is a survey form to retrieve information
+                about how people understan football game.
+            </p>
+            <form id="survey-form" action="index.html" method="post">
+                <label class="Left" id="name-label" for="name">First Name </label>
+                <input class="Left" type="text" id="name" name="fname" value="" placeholder="Your First Name" required>
+                <label  class="Left" id="name-label" for="name">Last Name </label>
+                <input type="text" id="last-name" name="lname" value="" placeholder="Your Last Name" required>
+                <label  class="Left" id="email-label" for="email">E-mail</label>
+                <input type="email" id="email" name="email" value="" placeholder="Your Email" required>
+                <label  class="Left" id="number-label" for="number">How do you like football ?</label>
+                <input type="number" id="number" name="number" value="" placeholder="0-10" min="0" max="10">
+
+
+                <label class="Left"  for="dropdown">Gender</label>
+                <select id="dropdown" name="gender" >
+                    <option value="" selected>-</option>
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+                </select>
+
+                <label class="Left radio" for="radio">UCL 2019 - 2020 Champion</label>
+                <span id="radio">
+                    <label for="Liverpool">Liverpool
+                        <input type="radio" name="UCL_Winner" value="Liverpool">
+                    </label>
+
+                    <label for="Bayern Munich">Bayern Munich
+                        <input type="radio" name="UCL_Winner" value="Bayern Munich">
+                    </label>
+
+                    <label for="Barcelona FC">Barcelona FC
+                        <input type="radio" name="UCL_Winner" value="Barcelona FC">
+                    </label>
+                </span>
+
+                <label class="Left checkbox" for="checkbox">Premiere League Winner in last Decade</label>
+                <span id="checkbox">
+                    <label for="Liverpool"> Liverpool
+                        <input type="checkbox" name="Liverpool" value="Liverpool">
+
+                    </label>
+                    <label for="Arsenal"> Arsenal
+                        <input type="checkbox" name="Arsenal" value="Arsenal">
+
+                    </label>
+                    <label for="Man City"> Man City
+                        <input type="checkbox"  name="Man City" value="Man City">
+
+                    </label>
+                </span>
+
+
+                <label class=" Left textArea" for="textarea">Do you agree with VAR in football</label>
+                <textarea id="textarea"name="var_opinion" rows="8" cols="80" placeholder=""></textarea>
+
+                <input type="submit" id="submit" name="submit">
+
+            </form>
+        </main>
+
     </body>
+    <script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
+
+    </script>
 </html>
